@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alfredo
+
+spec:
+  containers:
+    - name: shadow
+      image: nginx:alpine
+      ports:
+        - containerPort: 80
+
+    - name: dark
+      image: busybox
+      command: ["sleep", "3600"]
